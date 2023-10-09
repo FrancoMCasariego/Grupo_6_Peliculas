@@ -15,6 +15,28 @@
     background-color: rgb(29, 29, 29);
     color: white;
 }
+#next-movie .next-container{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#next-movie .next-list{}
+#next-movie .movie-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+#next-movie .next-movie-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+#next-movie .next-description{}
+
 #next-movie .testeo{
     width: 20px;
     height: 20px;
