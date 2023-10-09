@@ -1,5 +1,41 @@
+.menu-icon{
+    animation: rotate 2s linear infinite;
+    width: 300px;
+    height: 300px;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#next-movie{
+    background-color: rgb(29, 29, 29);
+    color: white;
+}
 #next-movie .testeo{
     width: 20px;
     height: 20px;
     font-size: 20px;
+}
+#next-movie .previous-arrow{
+    transform: rotate(180deg);
+    color: white;
+
+    width: 50px;
+    height: 50px;
+}
+#next-movie .previous-arrow:hover{
+    transform: rotate(540deg);
+    transition: 1s;
+}
+#next-movie .next-arrow{
+    width: 50px;
+    height: 50px;
+}
+#next-movie .next-arrow:hover{
+    transform: rotate(360deg);
+    transition: 1s;
 }
