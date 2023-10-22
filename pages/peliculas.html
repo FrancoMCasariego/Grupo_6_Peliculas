@@ -3,19 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movi mania</title>
-</head>
+    <link rel="stylesheet" href="../assets/css/styles.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Movie Manía</title>
+
 <body>
     <header>
-        <nav class="menu">
-           <ul class="menu_lista">
-            <li class="menu_inicio"><a href="../index.html">Inicio</a></li>
-            <li class="menu_peliculas"><a href="peliculas.html">Peliculas</a></li>
-            <li class="menu_proximamente"><a href="proximamente.html">Proximamente</a></li>
-            <li class="menu_contacto"><a href="contacto.html">Contacto</a></li>
-           </ul> 
+        <nav class="contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="./pages/peliculas.html">Películas</a>
+            <a href="./pages/proximamente.html">Próximamente</a>
+            <a href="./pages/contacto.html">Contacto</a>
         </nav>
     </header>
-    
-    
-    <p>pelicula</p>
+    <main>
+        <div class="contenedor">
+            <div class="controles">
+                <h3>Películas</h3>
+                <div class="paginacion">
+                    <button></button>
+                    <button></button>
+                </div>
+
+            </div>
+            <div class="galeria">
+                <button role="button" class="flecha-izquierda"><i class="fa-solid fa-circle-arrow-left"></i></button>
+                <div class="lista-imagenes">
+                    <a href="#"></a> <img src="../assets/images/1.jpg" alt="Imagen principal">
+                    <a href="#"></a> <img src="../assets/images/2.jpg" alt="Imagen principal">
+                    <a href="#"></a> <img src="../assets/images/3.jpg" alt="Imagen principal">
+                    <a href="#"></a> <img src="../assets/images/4.jpg" alt="Imagen principal">
+                    <a href="#"></a> <img src="../assets/images/5.jpg" alt="Imagen principal">
+                </div>
+                <button role="button" class="flecha-derecha"><i class="fa-solid fa-circle-arrow-right"></i></button>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
