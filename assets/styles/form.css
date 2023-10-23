@@ -1,0 +1,34 @@
+.formulario {
+    background-color: #585f7ac9;
+    width: 15em;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3%;   
+}
+
+.contacto {
+ margin: 0 auto;
+}
+
+input{
+    height: 20px;
+}
+
+label { 
+    margin-top: 3px;
+    margin-bottom: 1px;
+}
+
+input, textarea {
+    margin-bottom: 3px;
+    margin-top: 1px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.enviar {
+    margin-top: 5px;
+    background-color:#9fb3ffc9 ;
+ }

@@ -2,9 +2,11 @@
     width: 15em;
     margin: auto;
     display: flex;
-    flex-direction: column;
-    
-    
+    flex-direction: column;   
+}
+
+.contacto {
+    margin: 0 auto;
 }
 
 input{
