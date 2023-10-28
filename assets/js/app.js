@@ -1,7 +1,14 @@
 const api_key = "api_key=78d991126ffe36d8e5a86072b85d5d2c";
-const url = "https://api.themoviedb.org/3/movie/popular?api_key=78d991126ffe36d8e5a86072b85d5d2c&language=es-MX";
 
-const mostrarPeliculas = async(cantidadPeliculas) => {
+
+// cantidadPeliculas: cantidad de peliculas a mostrar, 1 a 20.
+// tipo puede ser: "now_playing", "upcoming", "popular" o "top_rated"
+// id; id del contenedor
+
+
+const mostrarPeliculas = async(cantidadPeliculas, tipo, id) => {
+
+    const url = "https://api.themoviedb.org/3/movie/" + tipo + "?api_key=78d991126ffe36d8e5a86072b85d5d2c&language=es-MX";
     
     const respuesta = await fetch(url);
     const datos = await respuesta.json();
@@ -22,9 +29,13 @@ const mostrarPeliculas = async(cantidadPeliculas) => {
         };
 
 
-        document.getElementById("contenedor").innerHTML = peliculas;
+        document.getElementById(id).innerHTML = peliculas;
 
     };
 
 
-mostrarPeliculas(3);
+mostrarPeliculas(20, "now_playing", "contenedor_inicio");
+
+mostrarPeliculas(3, "popular", "contenedor_peliculas");
+
+mostrarPeliculas(5, "upcoming", "contenedor_proximamente");
