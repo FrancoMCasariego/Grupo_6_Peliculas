@@ -1,20 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movi mania</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movi mania2</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
     <header>
-        <nav class="menu">
-           <ul class="menu_lista">
+      <div class="contenedor">
+        <h2 class="logotipo">MOVE MANIA</h2>
+        <nav>
+          <ul class="menu_lista">
             <li class="menu_inicio"><a href="index.html">Inicio</a></li>
-            <li class="menu_peliculas"><a href="./pages/peliculas.html">Peliculas</a></li>
-            <li class="menu_proximamente"><a href="./pages/peliculas.html">Proximamente</a></li>
-            <li class="menu_contacto"><a href="./pages/proximamente.html">Contacto</a></li>
-           </ul> 
+            <li class="menu_peliculas">
+              <a href="./pages/peliculas.html">Peliculas</a>
+            </li>
+            <li class="menu_proximamente">
+              <a href="./pages/proximamente.html">Proximamente</a>
+            </li>
+            <li class="menu_contacto">
+              <a href="./pages/contacto.html">Contacto</a>
+            </li>
+          </ul>
         </nav>
+      </div>
     </header>
+
+    <!-- Aqui comienza el TOP 10 -->
+    <main>
+      <div class="peliculas-top10 contenedor">
+        <!-- Titulo TOP 10 -->
+        <div class="contenedor-titulo-controles">
+          <h3>TOP 10</h3>
+          <!-- manejo de indicadores con JS -->
+          <div class="indicadores"></div>
+        </div>
+        <!-- Titulo TOP 10 -->
+        <div class="contenedor-principal">
+          <!-- Boton IZQ -->
+          <button role="button" id="flecha-izquierda" class="flecha-izquierda">
+            <!-- imagen flecha IZQ -->
+            <i class="fas fa-angle-left"></i>
+          </button>
+          <div class="contenedor-carousel">
+              <div class="carousel" >
+              <!-- <div class="pelicula">
+                <a href="#"><img src="assets/images/top 1.jpg" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="assets/images/top 2.jpg" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="assets/images/top 3.jpg" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="assets/images/top 4.jpg" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="assets/images/top 5.jpg" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="assets/images/top 6.jpg" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="assets/images/top 7.jpg" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="assets/images/top 8.jpg" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="assets/images/top 9.jpg" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="assets/images/top 10.jpg" alt="" /></a>
+              </div> -->
+            </div>
+          </div>
+          <!-- Boton DER -->
+          <button role="button" id="flecha-derecha" class="flecha-derecha">
+            <!-- imagen flecha DER -->
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- script para sacar los botones de IZQ DER -->
+    <script
+      src="https://kit.fontawesome.com/2c36e9b7b1.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- js para manejar las flechas -->
+    <script src="assets/js/main.js"></script>
+
     
-    <p>inicio</p>
+
+    <!-- Aqui comienza el FOOTER -->
+    <footer class="footer">FOOTER</footer>
+  </body>
+</html>
