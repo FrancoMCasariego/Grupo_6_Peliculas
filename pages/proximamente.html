@@ -3,19 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assetss/css/styles.css" >
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <title>Movie Manía</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <title>Movie mania</title>
     
 </head>
-<body>
+<body id="next-movie">
     <header>
-        <nav class="contenedor">
-            <a href="../index.html">Inicio</a>
-            <a href="peliculas.html">Películas</a>
-            <a href="proximamente.html">Próximamente</a>
-            <a href="contacto.html">Contacto</a>
+        <div class="next-header">
+            <div class="next-header-img">
+                <img class="menu-icon" src="../assets/images/moviecircle.png" alt="rollo de pelicula">
+            </div>
+            <div class="next-header-title">Movie Mania</div>
+            <div class="next-header-empty-container"></div>
+        </div>
+        <nav class="menu">
+            <ul class="menu-lista">
+                <li class="menu_inicio menu-lista-nav"><a href="../index.html">Inicio</a></li>
+                <li class="menu_peliculas menu-lista-nav"><a href="peliculas.html">Peliculas</a></li>
+                <li class="menu_proximamente menu-lista-nav"><a href="proximamente.html">Proximamente</a></li>
+                <li class="menu_contacto menu-lista-nav"><a href="contacto.html">Contacto</a></li>
+            </ul>
         </nav>
     </header>
-    
-    <p>proximamente</p>
+    <div class="next-container">
+        <h1 class="next-list">Próximos estrenos</h1>
+        <div class="movie-container">
+            <img class="next-movie-movie" src="" alt="imagen2">
+            <div class="next-movie-description">    
+                <h1 class="next-movie-title"></h1>
+                <p class="next-description"></p>
+            </div>
+            <img class="next-arrow" src="../assets/images/arrow-point-to-right.png" alt="arrowRight" onclick="nextMovie()">
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const movies = [
+            {   
+                title: "Boudica",
+                image: "../assets/images/Boudica.jpg",
+                description: "Inspirada en los acontecimientos del año 60 d.C., Boudica sigue a la guerrera celta del mismo nombre que gobierna al pueblo iceni junto a su marido Prasutagus. Cuando muere a manos de los soldados romanos, el reino de Boudica se queda sin un heredero varón y los romanos se apoderan de sus tierras y propiedades. Llevada al borde de la locura y decidida a vengar la muerte de su marido, Boudica reúne a las distintas tribus de la región y libra una guerra épica contra el poderoso imperio romano",
+                availability: "Disponible a partir del 25 de Octubre"
+            },
+            {
+                title: "Coco",
+                image: "../assets/images/Coco.jpg",
+                description: "A pesar de la desconcertante prohibición de la música impuesta por su familia desde hace generaciones, Miguel sueña con convertirse en un músico consumado como su ídolo, Ernesto de la Cruz. Desesperado por demostrar su talento, Miguel se encuentra en la impresionante y colorida Tierra de los Muertos siguiendo una misteriosa cadena de acontecimientos. En el camino, conoce al encantador embaucador Héctor y juntos emprenden un viaje extraordinario para descubrir la verdadera historia detrás de la historia familiar de Miguel.",
+                availability: "Disponible a partir del 26 de Octubre"
+            },
+            {
+                title: "Saw X",
+                image: "../assets/images/sawX.jpg",
+                description: "Entre los acontecimientos de 'Saw' y 'Saw II', un enfermo y desesperado John Kramer viaja a México para someterse a un procedimiento médico arriesgado y experimental con la esperanza de encontrar una cura milagrosa para su cáncer, sólo para descubrir que toda la operación es una estafa para defraudar. los más vulnerables. Armado con un nuevo propósito, el infame asesino en serie regresa a su trabajo, dándole la vuelta a los estafadores en su forma visceral característica a través de trampas tortuosas, trastornadas e ingeniosas.",
+                availability: "Disponible a partir del 25 de Septiembre"
+            },
+            {
+                title: "Blue Beetle",
+                image:"../assets/images/BlueBeetle.jpg",
+                description: "Jaime Reyes, recién graduado de la universidad, regresa a casa lleno de aspiraciones para su futuro, solo para descubrir que su hogar no está como lo dejó. Mientras busca encontrar su propósito en el mundo, el destino interviene cuando Jaime inesperadamente se encuentra en posesión de una antigua reliquia de biotecnología alienígena: el Escarabajo.",
+                availability:"Disponible a partir del 15 de Agosto"
+            },
+        ];
+
+        function updateMovie() {
+            const movieContainer = document.querySelector('.movie-container');
+            const movieImage = movieContainer.querySelector('.next-movie-movie');
+            const movieDescription = movieContainer.querySelector('.next-movie-description');
+            const movieTitle = movieContainer.querySelector('.movie-title');
+
+            movieImage.style.transform = 'translateX(-200%)';
+            movieDescription.style.transform = 'translateY(-300%)';
+
+            setTimeout(() => {
+                movieImage.src = movies[currentIndex].image;
+                movieDescription.innerHTML = `
+                    <h2 class="next-movie-title">${movies[currentIndex].title}</h2>
+                    <p class="next-description">${movies[currentIndex].description}</p>
+                    <p>${movies[currentIndex].availability}</p>
+                `;
+
+                movieImage.style.transform = 'translateX(0)';
+                movieDescription.style.transform = 'translateY(20%)';
+            }, 500);
+        }
+
+        function nextMovie() {
+            currentIndex = (currentIndex + 1) % movies.length;
+            updateMovie();
+        }
+        updateMovie();
+    </script>
+</body>
+</html>
