@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assetss/css/styles.css" >
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <title>Movie Manía</title>
-    
+    <title>Movi mania</title>
+    <link rel="stylesheet" href="../assets/styles/form.css">
 </head>
 <body>
     <header>
@@ -17,17 +15,24 @@
             <a href="contacto.html">Contacto</a>
         </nav>
     </header>
-    <h3>Contacto</h3>
-    <form action="" method="get">
-      <label for="">Nombre</label>
-      <input type="text" name="" id="" />
-      <label for="">Apellido</label>
-      <input type="text" name="" id="" />
-      <label for="">Correo electronico</label>
-      <input type="email" name="" id="" />
-      <label for="">¿Qué te gustaría ver? Contanos</label>
-      <textarea name="" id="" cols="10" rows="4"></textarea>
-      <input type="submit" value="Enviar" />
-    </form>
-  </body>
+        <form class="formulario" name="formulario_contacto" method="post" >
+    
+            <h2 class="contacto">Contacto</h2>
+       
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+        
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido"  placeholder="Ingrese su apallido" required>
+       
+            <label for="correo">Correo electronico</label>
+            <input type="email" name="Correo" id="Correo" placeholder="Ingrese su correo electronico" required>
+      
+            <label for="mensaje">¿Qué te gustaría ver? Contanos</label>
+            <textarea name="mensaje" id="mensaje" cols="" rows="5"  placeholder="Ingrese cometario" required></textarea>
+      
+            <input class="enviar" type="submit" value="Enviar">
+        </form>
+    
+    </body>
 </html>
