@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: rgb(29, 29, 29);
     font-family: 'Lato', sans-serif;
     color: #fff;
     margin: 0;
@@ -133,13 +133,12 @@ h3 {
 /*--------------Estilos footer ---------------*/
 .footer-container {
     border-top: 2px solid red;
-    width: 90%;
-    margin:auto;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 30px 100px 30px 30px;
 }
-
 footer li {
     list-style: none;
     text-align: center;
