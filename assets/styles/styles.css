@@ -1,130 +1,161 @@
-.menu-icon{
-    animation: rotate 2s linear infinite;
-    width: 300px;
-    height: 300px;
-}
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-#next-movie{
-    background-color: rgb(29, 29, 29);
-    color: white;
-}
-#next-movie .next-container{
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.next-container:hover .next-arrow {
-    transform: scale(1.1);
-}
-#next-movie .movie-container{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 50%;
-    position: relative;
-    overflow: hidden;
-}
-#next-movie .next-movie-description{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 380px;
-    width: 30%;
-    transition: transform 0.5s ease-in-out;
-    justify-content: space-evenly;
-}
-#next-movie .next-movie-movie,
-.next-movie-description{
-    transition: transform 0.5s ease-in-out;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-#next-movie .previous-arrow{
-    transform: rotate(180deg);
-    color: white;
-
-    width: 50px;
-    height: 50px;
-}
-#next-movie .next-arrow{
-    width: 50px;
-    height: 50px;
-}
-#next-movie .next-arrow:hover{
-    transform: rotate(360deg);
-    transition: 1s;
-}
-#next-movie .next-movie-movie{
-    width: 410px;
-    height: 600px;
-    transform: translateX(0);
-}
-#next-movie .next-header{
-    width: 100%;
+body {
+	background-color: rgb(29, 29, 29);
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    margin: 0;
     display: flex;
-    align-items: center;
+    height: auto;
+    min-height: 960px;
+    padding: 0;
+    box-sizing: border-box;
+    flex-direction: column;
     justify-content: space-between;
 }
-#next-movie .next-header-img{
-    width: 500px;
-    height: 350px;
-}
-#next-movie .next-header-title {
-    font-family: 'Arial', sans-serif;
-    font-size: 2.5em; 
-    color: #3498db; 
-    text-align: center;
-    margin-top: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+
+
+.contenedor {
+    width: 90%;
+    margin:auto;
 }
 
-.next-header-title:after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 2px;
-    background-color: #3498db;
-    margin: 10px auto; 
+header, footer {
+    padding: 30px 0;
 }
-#next-movie .next-header-empty-container{
-    width: 500px;
-}
-#next-movie .next-movie-title{
-    background: linear-gradient(to bottom, #FFF, black);
-    -webkit-background-clip: text;
-    color: transparent;
-    display: inline-block;
-}
-#next-movie .menu-lista{
+
+header .contenedor{
     display: flex;
-    width: 95%;
-    justify-content: space-around;
-    list-style-type: none;
-    border-bottom: 3px solid rgb(45, 45, 45);
-}
-#next-movie .menu-lista-nav{
-    background: linear-gradient(to top, rgb(29, 29, 29), rgb(35,35,35));
-    width: 20%;
-    display: flex;
-    height: 100px;
-    font-size: 40px;
-    color: #3498db;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
 }
-#next-movie .menu-lista-nav a:hover {
-    color: #3498db;
-    border-bottom: 2px solid black
+
+header .logo,
+footer .logo  {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
 }
-#next-movie .menu-lista-nav a {
-    text-decoration: none; 
-    color: #333;
-    border-bottom: 1px solid gray;
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+header nav a:hover,
+header nav a.activo {
+    color: red;
+}
+
+/*--------------Estilos footer ---------------*/
+.footer-container {
+    border-top: 2px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px 30px 30px;
+}
+
+footer li {
+    list-style: none;
+    text-align: center;
+    line-height: 35px;
+}
+
+footer a {
+    color: white;
+    display: block;;
+}
+
+footer a:hover {
+    color: red
+}
+
+.fa-brands {
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+/*--------------Estilos footer ---------------*/
+@media screen and (max-width: 800px) {
+	header .logo {
+		margin-bottom: 10px;
+		font-size: 45px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+    header nav a {
+        color: white;
+        text-decoration: none;
+        margin-right: 30px;
+    }
+
+	.pelicula-principal {
+		font-size: 14px;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 100%;
+	}
+
+	.peliculas-top10 .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-top10 .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+    .box-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 60px; 
+    }
+
+	.peliculas-top10 .indicadores,
+	.peliculas-top10 .flecha-izquierda,
+	.peliculas-top10 .flecha-derecha {
+		display: none;
+	}
+
+    footer .logo {
+        font-size: 30px;
+    }
+}
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: red;
 }

@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movi mania</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b28efab697.js" crossorigin="anonymous"></script>
+    <title>Movie Manía</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css">
     <link rel="stylesheet" href="../assets/styles/form.css">
 </head>
 <body>
     <header>
-        <nav class="contenedor">
-            <a href="../index.html">Inicio</a>
-            <a href="peliculas.html">Películas</a>
-            <a href="proximamente.html">Próximamente</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+        <div class="contenedor">
+            <h2 class="logo"><span style="color:white">Movie</span><span style="color:red">manía</span></h2>
+            <nav>
+                <a href="../index.html">Inicio</a>
+                <a href="peliculas.html">Películas</a>
+                <a href="proximamente.html">Próximamente</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
     </header>
         <form class="formulario" name="formulario_contacto" method="post" >
     
@@ -23,16 +29,32 @@
             <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
         
             <label for="apellido">Apellido</label>
-            <input type="text" name="apellido" id="apellido"  placeholder="Ingrese su apallido" required>
+            <input type="text" name="apellido" id="apellido"  placeholder="Ingrese su apellido" required>
        
             <label for="correo">Correo electronico</label>
             <input type="email" name="Correo" id="Correo" placeholder="Ingrese su correo electronico" required>
       
             <label for="mensaje">¿Qué te gustaría ver? Contanos</label>
-            <textarea name="mensaje" id="mensaje" cols="" rows="5"  placeholder="Ingrese cometario" required></textarea>
+            <textarea name="mensaje" id="mensaje" cols="" rows="5"  placeholder="Ingrese un comentario" required></textarea>
       
             <input class="enviar" type="submit" value="Enviar">
         </form>
+        <footer class="footer-container">
+            <h2 class="logo"><span style="color:white">Movie</span><span style="color:red">manía</span></h2>
+            
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/peliculas.html">Películas</a></li>
+                <li><a href="../pages/proximamente.html">Próximamente</a></li>
+                <li><a href="../pages/contacto.html">Contacto</a></li>
+            </ul>
+
+            <div class="redes-sociales">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>  
+            </div>
+    </footer>
     
     </body>
 </html>
