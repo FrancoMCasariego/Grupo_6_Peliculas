@@ -5,7 +5,7 @@ const appindex = async() => {
 
 
 	// Carga peliculas en el div carusel
-    const url = "https://api.themoviedb.org/3/movie/" + "top_rated" + "?api_key=78d991126ffe36d8e5a86072b85d5d2c&language=es-MX";
+    const url = "https://api.themoviedb.org/3/movie/" + "popular" + "?api_key=78d991126ffe36d8e5a86072b85d5d2c&language=es-MX";
      
     const contenedor = document.querySelector(".carousel");
     
@@ -25,13 +25,17 @@ const appindex = async() => {
             img.src = "https://image.tmdb.org/t/p/w500/" + pelicula.poster_path;
 
             const anc = document.createElement("a");
-            anc.href = "#"
+            anc.href = "./pages/peli.html?idpelicula=" + pelicula.id;
 
             div.append(anc);
             anc.append(img)
             frag.append(div)   
         };
     contenedor.append(frag);
+
+};
+
+appindex();
 
 
 
@@ -98,6 +102,6 @@ const appindex = async() => {
 		peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
 	});
 
-};
+// };
 
-appindex();
+// appindex();

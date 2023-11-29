@@ -1,0 +1,25 @@
+.trailer-pelicula {
+    width: 90%;
+    display: flex;
+    margin: 10% auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.video {
+    width: 25em;
+   height: 20em;
+   margin: 5% auto;
+}
+
+.info {
+    margin: 5%;
+}
+
+@media screen and (max-width: 800px) {
+    .trailer-pelicula {
+        flex-direction: column;
+        margin: 10%;
+    }
+}
