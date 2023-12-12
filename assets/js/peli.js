@@ -2,6 +2,8 @@
 function obtenerVolor() {
     const url = window.location.href;
     const valor = url.split("=")[1];
+    
+    console.log("valor "+ valor)
 
     return valor;
 };
@@ -15,7 +17,7 @@ const infoPeli = async(idpelicula) => {
     const respuesta = await fetch(url);
     const datos = await respuesta.json();
 
-    console.log(datos);
+    
 
     const tit = document.querySelector(".titulo");
     tit.textContent = datos.title;
@@ -24,17 +26,23 @@ const infoPeli = async(idpelicula) => {
     est.textContent = datos.release_date;
 
     const gen = document.querySelector(".genero");
-    gen.textContent = "Genero";
+    gen.textContent = "Genero";console.log(respuesta)
+    console.log(url)
+
+    console.log("datos: " + datos);
 
     const res = document.querySelector(".descripcion");
     res.textContent = datos.overview;
-           
+
+    const voto = document.querySelector(".votar");
+    voto.href = "agregarPeli.html?idpelicula=" + idpelicula + "&imagen=" + datos.poster_path;
+    
 };
 
 // Carga video
 const cargarVideo = async(idpelicula) => {
 
-    console.log(idpelicula);
+    console.log("crgar" + idpelicula);
 
 	
     const url = "https://api.themoviedb.org/3/movie/" + idpelicula  + "/videos" + "?api_key=78d991126ffe36d8e5a86072b85d5d2c";

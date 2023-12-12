@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/styles/styles.css" >
-    <link rel="stylesheet" href="../assets/styles/peli.css" >
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b28efab697.js" crossorigin="anonymous"></script>
     <title>Movie Manía</title>
-
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="">
+</head>
 <body>
     <header>
         <div class="contenedor">
@@ -22,30 +22,25 @@
         </div>
     </header>
 
-    
-    <section>
-        <div class="trailer-pelicula">
-                <div class="reproductor">
-                    <iframe class="video"  src="#" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
-                </div>
-                <div class="info">
-                    <h2 class="titulo">Películas</h2>
-                    <h3 class="fecha">Fecha de lanzamiento</h3>
-                    <h3 class="genero"></h3>
-                    <p class="descripcion"></p>
-                    <a class="votar" href="#">Votar</a>
-                </div>
-        </div>
-    
+        <form class="agregarPelicula" id="agregarPelicula" name="" method="post" action="">
+           
+            <h2 class="contacto">Altas peliculas</h2>
+
+            <label for="idtmdb">idtmdb</label>
+            <input class="idtmdb" type="number" name="idtmdb" id="" placeholder="" disabled required>
         
-    
+            <label for="imagen">Imagen</label>
+            <input class="imagen" type="text" name="imagen" id="" placeholder="" disabled required>
 
-
-
+            <label for="votos">votos</label>
+            <input type="number" name="votos" id="" placeholder="" required>
+        
+            <input class="enviar" type="submit" value="Enviar">
+        </form>
 
     <footer class="footer-container">
         <h2 class="logo"><span style="color:white">Movie</span><span style="color:red">manía</span></h2>
-        
+            
         <ul>
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="../pages/peliculas.html">Películas</a></li>
@@ -58,9 +53,7 @@
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-tiktok"></i>  
         </div>
-
-
-</footer>
-<script src="../assets/js/peli.js"></script>
-</body>
-</html> 
+     </footer>
+    <script src="../assets/js/altas.js"></script>
+    </body>
+</html>
