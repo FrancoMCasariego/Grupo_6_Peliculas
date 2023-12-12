@@ -74,11 +74,7 @@
 		font-size: 30px;
 	}
 
-	header .contenedor {
-		flex-direction: column;
-		text-align: center;
-	}
-
+	
 	.pelicula-principal {
 		font-size: 14px;
 	}
@@ -102,48 +98,4 @@
 	.peliculas-top10 .flecha-derecha {
 		display: none;
 	}
-}
-.formulario {
-    background-color: #98acffc9;
-    width: 800px;
-    margin: auto;
-    height: 440px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 3%;   
-}
-
-.contacto {
- margin: 0 auto;
-}
-
-input{
-    height: 20px;
-}
-
-label { 
-    margin-top: 3px;
-    margin-bottom: 1px;
-}
-
-input, textarea {
-    border-color: #98acffc9 ;
-    margin-bottom: 3px;
-    margin-top: 1px;
-    border-radius: 5px;
-    border-width: 1px;
-
-}
-
-.enviar {
-    margin-top: 25px;
-    background-color:#3a5ff3c9;
-    height: 80px;
-    font-size: 25px;
-    color: #fff;
-    font-family: monospace;
- }
-.enviar:hover{
-    opacity: 0.8;
 }
