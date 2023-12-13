@@ -17,6 +17,8 @@ const infoPeli = async(idpelicula) => {
     const respuesta = await fetch(url);
     const datos = await respuesta.json();
 
+    console.log(datos)
+
     
 
     const tit = document.querySelector(".titulo");
