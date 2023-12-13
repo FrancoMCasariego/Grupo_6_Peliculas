@@ -18,13 +18,14 @@ class Pelicula:
        
             
     def agregar_pelicula(self, idtmdb, imagen, votos):
-        #sql = "INSERT INTO `db-tpf`.`productos` (`nombre`, `precio`, `stock`) VALUES ('" + nombre + "', " + precio + ", " + stock + ");"
+        #sql = "UPDATE `db-tpf`.`productos` (`nombre`, `precio`, `stock`) VALUES ('" + nombre + "', " + precio + ", " + stock + ");"
         sql = "INSERT INTO `db-moma`.`peliculas` (`idtmdb`, `imagen`,`votos`  ) VALUES (%s, %s, %s);" # ESTO ES UNA CONSULTA PARAMETRIZADA (ES MAS SEGURA) %s ES UNA VARIABLE QUE SE VA A CAMBIAR POR OTRO VALOR EVITA EL SQL INJECTION
         valores = (idtmdb, imagen, votos)
         
         self.cursor.execute(sql, valores)
         self.conn.commit()
         return True
+    
     
 
 pelicula = Pelicula(host='localhost', user='root', password='', database='db-moma')
@@ -33,6 +34,7 @@ pelicula = Pelicula(host='localhost', user='root', password='', database='db-mom
 def agregar_pelicula():
     
     idtmdb = request.form['idtmdb']
+    print
     imagen = request.form['imagen']
     votos = request.form['votos']
 
@@ -42,7 +44,7 @@ def agregar_pelicula():
     # imagen_url = f"{nombre_base}{extension}" # ESTO ES PARA QUE EL NOMBRE DE LA IMAGEN SEA UNICO
     
     # # ESTO ES PARA GUARDAR LA IMAGEN EN UNA CARPETA    
-    si_se_agrego = pelicula.agregar_pelicula(idtmdb, titulo, imagen, video, genero, votos)
+    si_se_agrego = pelicula.agregar_pelicula(idtmdb, imagen, votos)
     if si_se_agrego:
     # #   imagen.save(os.path.join(RUTA_DESTINO, imagen_url))
         
